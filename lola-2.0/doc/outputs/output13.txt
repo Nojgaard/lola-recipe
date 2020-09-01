@@ -1,0 +1,57 @@
+{
+  "store": {
+    "type": "prefix",
+    "threads": 1,
+    "search": "depth_first_search",
+    "encoder": "bit-perfect",
+    "bucketing": 16
+  },
+  "path": [
+    "tl.[y=1]",
+    "tr.[y=1]"
+  ],
+  "net": {
+    "transitions": 40,
+    "places_significant": 30,
+    "places": 50,
+    "filename": "phils10.lola",
+    "conflict_sets": 60
+  },
+  "limits": {
+    "time": null,
+    "markings": null
+  },
+  "call": {
+    "svn_version": "9424:9431",
+    "parameters": [
+      "--formula=AG ea.1 != 1",
+      "--json=../output13.tmp",
+      "--jsoninclude=path",
+      "phils10.lola"
+    ],
+    "package_version": "2.0-unreleased",
+    "optimizations": false,
+    "hostname": "hennes.informatik.uni-rostock.de",
+    "build_system": "x86_64-apple-darwin13.2.0",
+    "assertions": true,
+    "architecture": 64
+  },
+  "analysis": {
+    "type": "modelchecking",
+    "stats": {
+      "states": 3,
+      "edges": 2
+    },
+    "result": false,
+    "formula": {
+      "type": "invariance",
+      "processed_size": 27,
+      "processed": "(ea.1 <= 1 AND -ea.1 <= -1)",
+      "places_mentioned_unique": 1,
+      "places_mentioned": 2,
+      "parsed_size": 14,
+      "parsed": "AG (ea.1 != 1)",
+      "atomic_propositions": 2
+    }
+  }
+}
